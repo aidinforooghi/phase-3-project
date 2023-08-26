@@ -30,3 +30,5 @@ class Enrollment(Base):
      student_id = Column(Integer, ForeignKey('students.id'))
      course_id = Column(Integer, ForeignKey('courses.id'))
      student = relationship("Student", back_populates="enrollments")
+
+     course = relationship("Course", back_populates="enrollments")
