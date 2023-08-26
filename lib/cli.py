@@ -69,3 +69,17 @@ def list_students():
             click.echo(f"ID: {student.id} | Name: {student.name}")
 
     session.close()
+
+@cli.command()
+def list_courses():
+
+    courses = session.query(Course).all()
+
+    if not courses:
+        click.echo("No courses found.")
+    else:
+        click.echo("Courses:")
+        for course in courses:
+            click.echo(f"ID: {course.id} | Name: {course.name}")
+
+    session.close()
