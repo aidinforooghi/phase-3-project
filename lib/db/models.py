@@ -26,3 +26,4 @@ class Course(Base):
 
 class Enrollment(Base):
     __tablename__ = 'enrollments'
+     id = Column(Integer, primary_key=True)
