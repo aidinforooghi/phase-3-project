@@ -14,3 +14,14 @@ def seed_enrollments():
 
     for enrollment in enrollments:
         click.echo(f"Student: {enrollment.student.name}, Course: {enrollment.course.name}")
+
+
+@cli.command()
+@click.argument('name')
+def add_student(name):
+
+    student = Student(name=name)
+    session.add(student)
+    session.commit()
+    session.close()
+    click.echo(f"Added student: {name}")
