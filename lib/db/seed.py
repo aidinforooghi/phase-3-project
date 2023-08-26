@@ -9,3 +9,4 @@ def seed_data():
         course2 = Course(name="Science")
 
     enrollment1 = Enrollment(student=student1, course=course1)
+    enrollment2 = Enrollment(student=student1, course=course2)
