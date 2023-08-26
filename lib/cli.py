@@ -9,14 +9,8 @@ def cli():
 
 
 @cli.command()
-def enrollments():
+def seed_enrollments():
     enrollments = session.query(Enrollment).all()
-
 
     for enrollment in enrollments:
         click.echo(f"Student: {enrollment.student.name}, Course: {enrollment.course.name}")
-
-
-if __name__ == "__main__":
-    seed_data()
-    cli()
