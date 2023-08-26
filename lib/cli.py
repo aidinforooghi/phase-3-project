@@ -55,3 +55,17 @@ def enroll_student(student_id, course_id):
         session.close()
         message = f"Enrolled student {student_name} in course {course_name}"
         click.echo(message)
+
+@cli.command()
+def list_students():
+
+    students = session.query(Student).all()
+
+    if not students:
+        click.echo("No students found.")
+    else:
+        click.echo("Students:")
+        for student in students:
+            click.echo(f"ID: {student.id} | Name: {student.name}")
+
+    session.close()
