@@ -25,3 +25,7 @@ def add_student(name):
     session.commit()
     session.close()
     click.echo(f"Added student: {name}")
+
+@cli.command()
+@click.argument('name')
+def add_course(name):
