@@ -112,3 +112,28 @@ def delete_student(student_id):
         session.commit()
         session.close()
         click.echo(f"Deleted student: {student.name}")
+
+@cli.command()
+@click.confirmation_option(prompt='Are you sure you want to delete all enrollments?')
+def delete_all_enrollments():
+
+    enrollments = session.query(Enrollment).all()
+    for enrollment in enrollments:
+        session.delete(enrollment)
+
+    session.commit()
+    session.close()
+    click.echo("All enrollments deleted.")
+
+
+@cli.command()
+def generate_report():
+
+    enrollments = session.query(Enrollment).all()
+
+    if not enrollments:
+        click.echo("No enrollments found.")
+    else:
+        click.echo("Enrollment Report:")
+        for enrollment in enrollments:
+            click.echo(f"Student: {enrollment.student.name} | Course: {enrollment.course.name}")
