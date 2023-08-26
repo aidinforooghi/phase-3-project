@@ -137,3 +137,10 @@ def generate_report():
         click.echo("Enrollment Report:")
         for enrollment in enrollments:
             click.echo(f"Student: {enrollment.student.name} | Course: {enrollment.course.name}")
+
+
+
+
+if __name__ == "__main__":
+    seed_data()
+    cli()
