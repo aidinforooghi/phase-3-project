@@ -15,3 +15,7 @@ class Student(Base):
         id = Column(Integer, primary_key=True)
     name = Column(String)
     enrollments = relationship("Enrollment", back_populates="student")
+
+
+class Course(Base):
+    __tablename__ = 'courses'
