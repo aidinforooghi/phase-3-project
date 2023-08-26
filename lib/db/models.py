@@ -22,3 +22,7 @@ class Course(Base):
         id = Column(Integer, primary_key=True)
     name = Column(String)
     enrollments = relationship("Enrollment", back_populates="course")
+
+
+class Enrollment(Base):
+    __tablename__ = 'enrollments'
