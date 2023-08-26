@@ -83,3 +83,32 @@ def list_courses():
             click.echo(f"ID: {course.id} | Name: {course.name}")
 
     session.close()
+
+
+@cli.command()
+@click.argument('course_id', type=int)
+def delete_course(course_id):
+
+    course = session.query(Course).get(course_id)
+
+    if not course:
+        click.echo("Course not found.")
+    else:
+        session.delete(course)
+        session.commit()
+        session.close()
+        click.echo(f"Deleted course: {course.name}")
+
+@cli.command()
+@click.argument('student_id', type=int)
+def delete_student(student_id):
+
+    student = session.query(Student).get(student_id)
+
+    if not student:
+        click.echo("Student not found.")
+    else:
+        session.delete(student)
+        session.commit()
+        session.close()
+        click.echo(f"Deleted student: {student.name}")
