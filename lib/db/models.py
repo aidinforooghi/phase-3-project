@@ -9,3 +9,6 @@ engine = create_engine("sqlite:///enrollment.db")
 Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
 session = Session()
+
+class Student(Base):
+    __tablename__ = 'students'
