@@ -10,3 +10,5 @@ def cli():
 
 
 @cli.command()
+def enrollments():
+    enrollments = session.query(Enrollment).all()
