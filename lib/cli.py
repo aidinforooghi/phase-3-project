@@ -12,3 +12,8 @@ def cli():
 @cli.command()
 def enrollments():
     enrollments = session.query(Enrollment).all()
+
+
+
+    for enrollment in enrollments:
+        click.echo(f"Student: {enrollment.student.name}, Course: {enrollment.course.name}")
