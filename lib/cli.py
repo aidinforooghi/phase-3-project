@@ -35,3 +35,23 @@ def add_course(name):
     session.commit()
     session.close()
     click.echo(f"Added course: {name}")
+
+@cli.command()
+@click.argument('student_id', type=int)
+@click.argument('course_id', type=int)
+def enroll_student(student_id, course_id):
+
+    student = session.query(Student).get(student_id)
+    course = session.query(Course).get(course_id)
+
+    if not student or not course:
+        click.echo("Invalid student ID or course ID")
+    else:
+        course_name = course.name
+        student_name = student.name
+        enrollment = Enrollment(student=student, course=course)
+        session.add(enrollment)
+        session.commit()
+        session.close()
+        message = f"Enrolled student {student_name} in course {course_name}"
+        click.echo(message)
