@@ -1,5 +1,5 @@
 import click
-from db.models import session, Enrollment
+from db.models import session, Enrollment, Student, Course
 from db.seed import seed_data
 
 
