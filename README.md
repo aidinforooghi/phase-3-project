@@ -1,4 +1,4 @@
-# Phase 3 CLI Project Template
+# Enrollment Management System
 
 ## Learning Goals
 
