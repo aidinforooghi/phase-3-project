@@ -1,6 +1,5 @@
 import click
 from db.models import session, Enrollment, Student, Course
-from db.seed import seed_data
 
 
 @click.group()
@@ -142,5 +141,4 @@ def generate_report():
 
 
 if __name__ == "__main__":
-    seed_data()
     cli()
