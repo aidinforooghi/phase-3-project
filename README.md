@@ -35,7 +35,7 @@ generate_report        # Generates a report of all enrollments.
 ```
 
 ## Contributor's Guide
-Contributions are welcome! If you'd like to contribute to the Movie Database project, please follow these steps:
+Contributions are welcome! If you'd like to contribute to the Enrollment Management System project, please follow these steps:
 
 1. Fork the repository.
 2. Create a new branch: `git checkout -b my-feature-branch`
@@ -45,6 +45,6 @@ Contributions are welcome! If you'd like to contribute to the Movie Database pro
 
 
 ## License
-The Movie Database project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
+The Enrollment Management System project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
 
 
