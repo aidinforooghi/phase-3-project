@@ -34,7 +34,12 @@ delete_all_enrollments # Deletes all student enrollments.
 generate_report        # Generates a report of all enrollments.
 ```
 
+## Demo Video
+
+You can see non-technical walkthrough of Enrollment Management System in browser [here](https://).
+
 ## Contributor's Guide
+
 Contributions are welcome! If you'd like to contribute to the Enrollment Management System project, please follow these steps:
 
 1. Fork the repository.
@@ -45,6 +50,7 @@ Contributions are welcome! If you'd like to contribute to the Enrollment Managem
 
 
 ## License
+
 The Enrollment Management System project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
 
 
