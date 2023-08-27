@@ -32,4 +32,19 @@ delete_course <course_id>  # Deletes a course by its ID.
 delete_student <student_id> # Deletes a student by their ID.
 delete_all_enrollments # Deletes all student enrollments.
 generate_report        # Generates a report of all enrollments.
+```
+
+## Contributor's Guide
+Contributions are welcome! If you'd like to contribute to the Movie Database project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b my-feature-branch`
+3. Make your changes and commit them: `git commit -m 'Add new feature'`
+4. Push the changes to your forked repository: `git push origin my-feature-branch`
+5. Submit a pull request detailing your changes and their purpose.
+
+
+## License
+The Movie Database project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
+
 
