@@ -36,7 +36,7 @@ generate_report        # Generates a report of all enrollments.
 
 ## Demo Video
 
-You can see non-technical walkthrough of Enrollment Management System in browser [here](https://).
+You can see non-technical walkthrough of Enrollment Management System in browser [here](https://www.loom.com/share/0c8c8243ff8344d8b857a5cf453e81a0).
 
 ## Contributor's Guide
 
